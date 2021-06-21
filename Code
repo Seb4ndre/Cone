@@ -1,0 +1,61 @@
+Algoritmo_Cono{
+flotante radio, generatriz, acono, areab, areal, areat, areav;
+
+imprimir("Introduzca el radio");
+leer(radio);
+imprimir("Introduzca la generatriz");
+leer(generatriz);
+imprimir("Introduzca la Altura del cono");
+leer(acono);
+
+areab = CalcAreaB(radio);
+areal = CalcAreaL(radio, generatriz);
+areat = CalcAreaT(areab, areal);
+areav = CalcAreaB(areab, acono);
+
+imprimir("El area base es", areab);
+imprimir("El volumen es", areav);
+imprimir("El area total es", areat);
+
+}
+
+
+flotante CalcAreaB(flotante a)
+{
+ //declarativas locales
+ flotante R;
+
+ //Cuerpo
+ R = (a*a)*3.1415;
+ retornar(R);
+}
+
+flotante CalcAreaL(flotante a, flotante b)
+{
+ //declarativas locales
+ flotante R;
+
+ //Cuerpo
+ R = (a*3.1415)*b;
+ retornar(R);
+}
+
+flotante CalcAreaT(flotante a, flotante b)
+{
+ //declarativas locales
+ flotante R;
+
+ //Cuerpo
+ R = a+b;
+ retornar(R);
+}
+
+flotante CalcAreaV(flotante a, flotante b)
+{
+ //declarativas locales
+ flotante R;
+
+ //Cuerpo
+ R = (a/3)*b;
+ retornar(R);
+}
